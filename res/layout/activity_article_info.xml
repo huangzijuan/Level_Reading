@@ -1,0 +1,125 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+   <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+   <LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/actbar_base_top" >
+
+        <ImageView
+            android:id="@+id/btn_title_left"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:background="@drawable/btn_bg_selector"/>
+        
+        <TextView
+            android:id="@+id/toptitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="文章详情"
+            android:textColor="@color/black"
+            android:textSize="20dip" />
+    </RelativeLayout>
+    
+    <ScrollView 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none">
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp" 
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:id="@+id/tvlesson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:text="Lesson1"
+            android:textColor="@color/black"
+            android:textSize="18dip" />
+        <Button 
+            android:id="@+id/btnhighlight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="单词高亮显示"
+            />
+    </RelativeLayout>
+    
+    <TextView
+            android:id="@+id/tvtitle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="英文标题"
+            android:textColor="@color/black"
+            android:textSize="18dip" />
+    <TextView
+            android:id="@+id/tvtitle2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="中文标题"
+            android:textColor="@color/black"
+            android:textSize="18dip" />
+    <TextView
+            android:id="@+id/tvcontent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="22222222222"
+            android:textColor="@color/black"
+            android:textSize="18dip" />
+    </LinearLayout>
+    </ScrollView>
+  </LinearLayout>
+
+   </FrameLayout>
+   <LinearLayout 
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:orientation="vertical" 
+        android:background="@color/drawer_bg"      
+        android:padding="20dp">
+   <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="过滤高亮单词等级"
+            android:textColor="@color/black"
+            android:textSize="20dip" />
+   <ListView
+        android:id="@+id/left_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp" >
+    </ListView>
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

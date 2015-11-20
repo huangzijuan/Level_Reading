@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- commonly used color -->
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="main_bg">#f0f0f0</color>
+
+    <color name="tool_bar">#24b389</color>
+
+
+    <color name="text_shadow">#33000000</color>
+    <color name="text_dark_shadow">#99000000</color>
+    <color name="welcome_bg">#F2F2F2</color>
+    <color name="drawer_bg">#FBFBFB</color>
+    <color name="tutorial_btn">#00B177</color>
+    <color name="custom_loading_bg">#EEEEEE</color>
+    <color name="splash_bg">#00b37e</color>
+    <color name="tutorial_title">#4d4d4d</color>
+    <color name="tutorial_content">#808080</color>
+    <color name="tutorial_button">#24b389</color>
+    <color name="text_background">#f7f7f7</color>
+    <color name="tutorial_detail_background">#f0f0f0</color>
+    <color name="load_error_background">#f0f0f0</color>
+    <color name="skip_text">#24b389</color>
+    <color name="retry_button_text">#808080</color>
+    <color name="load_failed_text">#cbcbcb</color>
+    <color name="tutorial_stroke">#cbcbcb</color>
+    <color name="stroke">#cbcbcb</color>
+    <color name="divider">#cbcbcb</color>
+    <color name="light_black_transparent">#0d000000</color>
+    <color name="half_black_transparent">#80000000</color>
+    <color name="font_black">#4d4d4d</color>
+    <color name="font_gray">#808080</color>
+    <color name="font_green">#24b389</color>
+    <color name="font_hint_gray">#b2b2b2</color>
+    <color name="gray_bg">#d6d6d6</color>
+    <color name="transparent_stroke">#33000000</color>
+    <color name="map_overlay">#40000000</color>
+    <color name="font_yellow">#fa9b38</color>
+    <color name="font_pink">#fa5a91</color>
+    <color name="font_brown">#ab7642</color>
+    <color name="font_cyan">#7869e0</color>
+    <color name="font_blue">#358ff0</color>
+    <color name="font_light_blue">#2ab0d1</color>
+    <color name="font_orange">#fa653f</color>
+    <color name="font_other_blue">#25b7af</color>
+
+    <color name="transparent_divider">#33000000</color>
+    <color name="popup_window_click">#1a000000</color>
+    <color name="gray_line">#e5e5e5</color>
+
+    <color name="gray_wide_divider">#f7f7f7</color>
+
+</resources>
