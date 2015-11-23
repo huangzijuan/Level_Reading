@@ -4,5 +4,7 @@
     <string name="app_name">Level-Reading</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="highlingt_show">高亮所有等级单词</string>
+    <string name="highlingt_hide">取消单词高亮显示</string>
 
 </resources>

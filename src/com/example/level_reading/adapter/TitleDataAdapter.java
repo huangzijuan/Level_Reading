@@ -16,6 +16,10 @@ public class TitleDataAdapter extends BaseAdapter {
 	private Context context;
     private List<Chapter> titleDateList;
 
+    public void setTitleDateList(List<Chapter> titleDateList) {
+		this.titleDateList = titleDateList;
+	}
+    
     public TitleDataAdapter(Context context, List<Chapter> titleDateList) {
         this.context = context;
         this.titleDateList = titleDateList;

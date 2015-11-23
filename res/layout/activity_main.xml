@@ -7,7 +7,7 @@
     <RelativeLayout
         android:id="@+id/top"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="52dp"
         android:background="@drawable/actbar_base_top" >
 
         <TextView
