@@ -48,21 +48,16 @@ public class MainActivity extends Activity {
 		init();
 
 		Thread managethread = new Thread() {
-
 			List<Chapter> temparrayChapter = getArticle();
 			Map<String, String> tempwordMap = getWordList();
-
 			@Override
 			public void run() {
-
 				Message msg = Message.obtain();
-
 				Bundle b = new Bundle();
 				b.putSerializable("data", (Serializable) temparrayChapter);
 				b.putSerializable("map", (Serializable) tempwordMap);
 				msg.setData(b);
 				mhandler.sendMessage(msg);
-
 			}
 		};
 		managethread.start();
@@ -74,7 +69,6 @@ public class MainActivity extends Activity {
 		lvTitleData.setAdapter(adapter);
 
 		lvTitleData.setOnItemClickListener(new OnItemClickListener() {
-
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
@@ -132,8 +126,16 @@ public class MainActivity extends Activity {
 				temparrayChapter1.add(chapter);
 			}
 		} catch (IOException e) {
-
 			e.printStackTrace();
+		}finally{
+			if(fis !=null){
+				try {
+					fis.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
 		}
 		return (ArrayList<Chapter>) temparrayChapter1;
 	}
@@ -153,12 +155,18 @@ public class MainActivity extends Activity {
 				tempString = br1.readLine();
 			}
 
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e1) {
+		}catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
+		}finally{
+			if(fis !=null){
+				try {
+					fis.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
 		}
 
 		for (int i = 1; i < dictsList.size(); i++) {

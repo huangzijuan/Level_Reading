@@ -32,7 +32,7 @@ import com.example.level_reading.data.Chapter;
 
 public class ArticleInfoActivity extends Activity {
 
-	private TextView tvLesson, tvTitle1, tvTitle2, tvContent;
+	private TextView tvLesson, tvTitle1, tvTitle2, tvContent, tvBack;
 	private Chapter chapter;
 	private ImageView btnTitleLeft;
 	private CheckBox btnHighLight;
@@ -86,6 +86,13 @@ public class ArticleInfoActivity extends Activity {
 		tvTitle2.setText(chapter.getC_title());
 		tvContent = (TextView) findViewById(R.id.tvcontent);
 		tvContent.setText(chapter.getContent());
+		tvBack = (TextView) findViewById(R.id.tvback);
+		tvBack.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				finish();
+			}
+		});
 
 		// 侧滑菜单
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -120,7 +127,6 @@ public class ArticleInfoActivity extends Activity {
 		});
 
 		btnHighLight = (CheckBox) findViewById(R.id.btnhighlight);
-
 		btnHighLight.setOnClickListener(new View.OnClickListener() {
 
 			@Override
