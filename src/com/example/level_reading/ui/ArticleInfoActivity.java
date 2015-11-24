@@ -32,7 +32,7 @@ import com.example.level_reading.data.Chapter;
 
 public class ArticleInfoActivity extends Activity {
 
-	private TextView tvLesson, tvTitle1, tvTitle2, tvContent, tvBack;
+	private TextView tvUnit,tvLesson, tvTitle1, tvTitle2, tvContent, tvBack;
 	private Chapter chapter;
 	private ImageView btnTitleLeft;
 	private CheckBox btnHighLight;
@@ -78,6 +78,8 @@ public class ArticleInfoActivity extends Activity {
 	}
 
 	private void init() {
+		tvUnit = (TextView) findViewById(R.id.tvunit);
+		tvUnit.setText(chapter.getUnit());
 		tvLesson = (TextView) findViewById(R.id.tvlesson);
 		tvLesson.setText(chapter.getLesson());
 		tvTitle1 = (TextView) findViewById(R.id.tvtitle1);

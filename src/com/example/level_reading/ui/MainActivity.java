@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import android.R.integer;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -37,6 +38,10 @@ public class MainActivity extends Activity {
 			wordMap = (Map<String, String>) msg.getData().get("map");
 			adapter.setTitleDateList(arrayChapter);
 			adapter.notifyDataSetChanged();
+			
+			for(int i=0; i<arrayChapter.size(); i++){
+				System.out.println(arrayChapter.get(i));
+			}
 
 		}
 	};
@@ -82,13 +87,16 @@ public class MainActivity extends Activity {
 		});
 	}
 
+	//从txt文件取出文章列表
 	private ArrayList<Chapter> getArticle() {
-		final String RE = "(Lesson )[0-9]*";
+		final String RElesson = "(Lesson )[0-9]*";
+		final String REunit = "(Unit )[0-9]*";
 		List<Chapter> temparrayChapter1 = new ArrayList<Chapter>();
 		InputStream fis = null;
 		StringBuffer sbContent = null;
 		Chapter chapter = null;
 		String line = null;
+		String unit = "Unit1";
 		int titleSign = 0;
 		try {
 			fis = getAssets().open("English4.txt");
@@ -106,13 +114,16 @@ public class MainActivity extends Activity {
 					if (chapter != null) {
 						chapter.setE_title(line.trim());
 					}
-				} else if (line.trim().matches(RE)) {
+				} else if (line.trim().matches(REunit)) {
+					unit = line.trim();
+				} else if (line.trim().matches(RElesson)) {
 					if (chapter != null) {
 						chapter.setContent(new String(sbContent));
 						temparrayChapter1.add(chapter);
 					}
 					chapter = new Chapter();
 					chapter.setLesson(line.trim());
+					chapter.setUnit(unit);
 					titleSign = 1;
 					sbContent = new StringBuffer();
 				} else {
@@ -140,6 +151,7 @@ public class MainActivity extends Activity {
 		return (ArrayList<Chapter>) temparrayChapter1;
 	}
 
+	//从txt文件取出单词列表
 	private Map<String, String> getWordList() {
 		InputStream fis = null;
 		List<String> dictsList = new ArrayList<String>();

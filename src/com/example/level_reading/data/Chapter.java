@@ -3,11 +3,18 @@ package com.example.level_reading.data;
 import java.io.Serializable;
 
 public class Chapter implements Serializable{
+	private String unit;
 	private String lesson;
 	private String e_title;
 	private String c_title;
 	private String content;
 	
+	public String getUnit() {
+		return unit;
+	}
+	public void setUnit(String unit) {
+		this.unit = unit;
+	}
 	public String getLesson() {
 		return lesson;
 	}
@@ -34,7 +41,7 @@ public class Chapter implements Serializable{
 	}
 	@Override
 	public String toString() {
-		return "Chapter [lesson=" + lesson + ", e_title=" + e_title
+		return "Chapter [unit=" + unit + ",lesson=" + lesson + ", e_title=" + e_title
 				+ ", c_title=" + c_title + ", content=" + content + "]";
 	}
 
