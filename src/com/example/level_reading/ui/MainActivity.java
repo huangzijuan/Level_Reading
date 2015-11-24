@@ -39,9 +39,9 @@ public class MainActivity extends Activity {
 			adapter.setTitleDateList(arrayChapter);
 			adapter.notifyDataSetChanged();
 			
-			for(int i=0; i<arrayChapter.size(); i++){
+	/*		for(int i=0; i<arrayChapter.size(); i++){
 				System.out.println(arrayChapter.get(i));
-			}
+			}*/
 
 		}
 	};

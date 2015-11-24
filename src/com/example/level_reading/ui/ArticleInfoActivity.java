@@ -66,13 +66,13 @@ public class ArticleInfoActivity extends Activity {
 		str = chapter.getContent();
 		spannableString = new SpannableString(str);
 
-		System.out.println("0000000000");
+/*		System.out.println("0000000000");
 		Set set = wordMap.entrySet();
 		Iterator iterator = set.iterator();
 		while (iterator.hasNext()) {
 			Map.Entry mapentry = (Map.Entry) iterator.next();
 			System.out.println(mapentry.getKey() + "/" + mapentry.getValue());
-		}
+		}*/
 
 		init();
 	}
